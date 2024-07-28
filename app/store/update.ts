@@ -58,10 +58,9 @@ export const useUpdateStore = createPersistStore(
     remoteVersion: "",
     used: 0,
     subscription: 0,
-
     lastUpdateUsage: 0,
   },
-  (set, , get) =>  => ({
+  (set, get) => ({
     formatVersion(version: string) {
       if (get().versionType === "date") {
         version = formatVersionDate(version);
